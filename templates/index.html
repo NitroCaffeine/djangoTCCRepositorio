@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Home</title>
+    <style>
+        .container-fluid{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           background-color: #181B1A;
+        }
+
+        .row{
+            height: 40%;
+            padding: 2rem;
+            background-color: #1D2021;
+            border-radius: 5px;
+        }
+
+        h1, .content a, .content p, .content{
+            color: #fff;
+            text-align: center;
+        }
+
+        .row-btn{
+            display: flex;
+            justify-content: center;
+        }
+
+        .content a, .content p{
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .content p {
+            margin-top: 1rem;
+        }
+
+        .btn {
+            width: 100px;
+            margin-left: 5px;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h1>Login</h1>
+            </div>
+            <div class="content">
+                
+                <div class="row row-btn">
+                    {% if not request.user.is_authenticated %}
+                    <button type="submit" class="btn btn-warning"><a class="nav-link" href="{% url 'usuarios:login' %}">Entrar</a></button>
+                    {% endif %}
+                    <button type="submit" class="btn btn-warning"><a class="nav-link" href="{% url 'usuarios:logout' %}">Sair</a></button>
+                </div>
+                
+                    {% if request.user.is_authenticated %}
+                        <a href="{% url 'usuarios:mudar_senha' %}">Mudar senha</a>
+                        <p>Está logado {{ request.user.username }}</p>
+                    {% else %}
+                        <p>não está logado</p>
+                    {% endif %}
+
+            </div>
+                
+        </row>
+
+    </div>
+   
+</body>
+</html>

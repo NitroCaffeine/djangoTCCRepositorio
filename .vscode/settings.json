@@ -1,0 +1,6 @@
+{
+    "python.analysis.autoImportCompletions": false,
+    "python.analysis.autoSearchPaths": false,
+    "python.analysis.extraCommitChars": false,
+    "python.analysis.useLibraryCodeForTypes": false
+}
