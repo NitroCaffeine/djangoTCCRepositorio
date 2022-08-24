@@ -85,7 +85,7 @@ DATABASES = {
         'USER': 'django_postgres',
         'PASSWORD': '123456',
         'HOST': 'localhost'
-     }
+    }
 }
 
 
@@ -132,13 +132,18 @@ USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT =  os.path.join(BASE_DIR, 'staticfiles')
 
+STATICFILES_DIRS = [
+
+    os.path.join(BASE_DIR , 'static')
+
+]
 
 
 MEDIA_URL = '/uploads/'
-MEDIA_ROOT = BASE_DIR / 'uploads' 
+MEDIA_ROOT = BASE_DIR / 'uploads'
 
 LOGIN_REDIRECT_URL = 'tcc:home'
 LOGIN_URL = 'usuarios:login'
-LOGOUT_REDIRECT_URL = 'tcc:home' 
+LOGOUT_REDIRECT_URL = 'tcc:home'

@@ -1,6 +1,23 @@
-{% for user in users%}
-    <p>{{user.id}}</p>
-    <p>{{user.username}}</p>
-    <p>{{user.email}}</p>
-    <p>{{user.password}}</p>
-{% endfor%}
+{% extends 'listar/base_table.html' %}
+
+{% block cabeca %}
+
+    <th>id</th>
+    <th>Nome</th>
+    <th>E-mail</th>
+{% endblock %}
+
+{% block corpo %}
+    {% for user in users%}
+    <td> {{user.id}}</td>
+    <td> {{user.username}}</td>
+    {% if user.email %}
+        <td> {{user.email}}</td>
+    {% endif %}
+    <td> # </td>
+    {% endfor%}
+                        
+{% endblock %}
+
+
+

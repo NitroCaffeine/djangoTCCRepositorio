@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% comment %} <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,10 +7,11 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container-fluid"></div>
     {% for a in consulta %}
         <p>{{a.primeiro_nome}}</p>
         <p>{{a.ultimo_nome}}</p>
         <p>{{a.curriculo_link}}</p>
     {% endfor %}
 </body>
-</html>
+</html> {% endcomment %}
