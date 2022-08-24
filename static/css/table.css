@@ -14,10 +14,17 @@ align-items: center
 
 
 header{
-    background-color: aliceblue;
+    background-color: none;
     height: 4rem;
     position: fixed;
     width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+hr{
+    background-color: white;
+    height: 2px;
 }
 
 .navbar-nav{
