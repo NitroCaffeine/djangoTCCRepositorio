@@ -1,24 +1,8 @@
 {% extends 'listar/base_body.html' %} {% load static %} {% block css %}
 <link rel="stylesheet" href="{% static 'css/table.css' %}" />
-{% endblock %} {% block body %}
+{% endblock %} 
 
-<header>
-    <nav class="navbar">
-      <div class="container-fluid">
-        <ul class="nav">
-             <li class="nav-item active">
-              <a class="nav-link" href="{% url 'tcc:home'%}">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'usuarios:listar' %}">Usuários</a>
-            </li>
-          </ul>
-      </div>
-
-    </nav>
-    <hr/>
-
-</header>
+{% block body %}
 
 <div class="container-fluid containerFluidTable">
   <div class="container">

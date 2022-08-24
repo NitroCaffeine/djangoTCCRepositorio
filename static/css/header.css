@@ -1,18 +1,9 @@
-body{
-    background-color: #181B1A;
-}
 
-.containerFluidTable{
+.container, .row-container{
     height: 100vh;
     background-color: #181B1A;
 }
 
-.col{
-display: grid;
-align-items: center
-}
-
-/* 
 header{
     background-color: none;
     height: 4rem;
@@ -46,18 +37,4 @@ hr{
 
 .nav-item a:hover{
     color: #FFC006;
-} */
-
-/* .container{
-    height: 100vh;
-    background-color: #181B1A;
-    margin: 0;
-    padding: 0;
-    width: 100vw !important;
-
-} */
-
-.table {
-    margin-top: 6rem;
-    /*background-color: none !important;*/
 }
