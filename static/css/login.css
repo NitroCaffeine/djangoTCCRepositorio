@@ -1,0 +1,55 @@
+body{
+    background-color: #181B1A;
+}
+
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #181B1A;
+ }
+
+ .col{
+    height: 100%;
+    width: 300px;
+
+ }
+
+ .row{
+
+     max-height: 450px;
+     padding: 2rem;
+     background-color: #1D2021;
+     border-radius: 5px;
+ }
+
+
+
+ .control-label, h3, .alert-error {
+        color: #fff;
+        text-align: center;
+        margin-top: 3px;
+
+ }
+
+ input {
+    border-radius: 5px;
+    border: 0;
+    margin-bottom: 1rem;
+    width: 280px;
+    height: 30px;
+ }
+
+input:focus{
+    outline: none; 
+    border: 1.5px solid #FEC007;
+
+}
+
+.alert-error, .alert-error ul{
+    padding: 0 !important
+}
+
+
+
