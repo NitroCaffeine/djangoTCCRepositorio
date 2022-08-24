@@ -18,8 +18,8 @@ header{
     height: 4rem;
     position: fixed;
     width: 100vw;
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
 }
 
 hr{

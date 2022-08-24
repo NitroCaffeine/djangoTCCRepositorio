@@ -13,8 +13,12 @@
     <td> {{user.username}}</td>
     {% if user.email %}
         <td> {{user.email}}</td>
+        {% else %}
+
+        <td>#</td>
     {% endif %}
 
+   
     {% endfor%}
                         
 {% endblock %}
