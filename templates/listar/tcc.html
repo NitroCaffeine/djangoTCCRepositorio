@@ -8,15 +8,19 @@
 </head>
 <body>
     oi
-    <h1> {{tcc.titulo}}</h1>
+    {% for consulta in consultas%}
+        <h1> {{consulta.titulo}}</h1>
+        
+        <p>{{consulta.curso}}</p>
+        <p>{{consulta.ano_documento}}</p>
+        <p>{{consulta.resumo}}</p>
+        <p>{{consulta.arquivo}}</p>
+        <p>{{consulta.palavras_chave}}</p>
+        <p>{{consulta.autor.primeiro_nome}}</p>
+        <img src="{{consulta.autor.foto.url}}">
+        <p>{{consulta.orientador.primeiro_nome}}</p
+    {% endfor %}
     
-    <p>{{tcc.curso}}</p>
-    <p>{{tcc.ano_documento}}</p>
-    <p>{{tcc.resumo}}</p>
-    <p>{{tcc.arquivo}}</p>
-    <p>{{tcc.palavras_chave}}</p>
-    <p>{{tcc.autor.primeiro_nome}}</p>
-    <img src="{{tcc.autor.foto.url}}">
-    <p>{{tcc.orientador.primeiro_nome}}</p>
+    >
 </body>
 </html>
