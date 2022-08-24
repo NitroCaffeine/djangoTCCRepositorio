@@ -44,7 +44,7 @@ def criar(request):
 
 def atualizar(request, id):
     user = User.objects.get(id=id)
-    form = UserForm(initial={'username': user.username,'last_name': user.last_name})
+    form = UserForm(initial={'username': user.username,'last_name': user.last_name, 'email': user.email})
     if request.method == "POST":  
         form = UserForm(request.POST, instance=user)  
         if form.is_valid():  

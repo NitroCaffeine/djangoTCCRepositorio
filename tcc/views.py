@@ -1,10 +1,13 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 
 from . import forms
 from .models import TCC, Autor, Curso, Orientador
 
+def autenticar_model(model):
+    if model.lower() not in ['tcc', 'autor', 'orientador', 'curso']:
+        raise Http404('Model not exist')
 
 def home(request):
     return render(request, 'index.html')
@@ -14,7 +17,9 @@ def tcc(request,id):
     tcc_detail = get_object_or_404(TCC, id=id)
     return render(request, 'tcc.html', context={'tcc': tcc_detail})
 
+@login_required
 def criar(request, model):
+    autenticar_model(model)
     form_model = eval(f'forms.{model.capitalize()}Form')
     if request.method == "POST": 
         form = form_model(request.POST, request.FILES)  
@@ -27,7 +32,9 @@ def criar(request, model):
         form = form_model()  
     return render(request,'criar.html',{'form':form, 'model': model.capitalize()})  
 
+@login_required
 def listar(request, model):
+    autenticar_model(model)
     if model.lower() == 'tcc':
         class_model = eval('TCC')
     else:
@@ -36,7 +43,9 @@ def listar(request, model):
     consultas = class_model.objects.all()
     return render(request, f'listar/{model.lower()}.html', {'consultas':consultas})
 
+@login_required
 def atualizar(request, model, id):
+    autenticar_model(model)
     if model.lower() == 'tcc':
         class_model = eval('TCC')
     else:
@@ -65,7 +74,9 @@ def atualizar(request, model, id):
                 pass    
     return render(request,'atualizar.html',{'form':form})
 
+@login_required
 def deletar(request, model, id):
+    autenticar_model(model)
     if model.lower() == 'tcc':
         class_model = eval('TCC')
     else:
