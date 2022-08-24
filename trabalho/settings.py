@@ -82,7 +82,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'tcc',
-        'USER': 'django_postgres',
+        'USER': 'postgres',
         'PASSWORD': '123456',
         'HOST': 'localhost'
     }

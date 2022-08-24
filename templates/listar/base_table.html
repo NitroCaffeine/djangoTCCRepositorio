@@ -3,12 +3,25 @@
 {% endblock %} {% block body %}
 
 <header>
-    <h1>Listar Usuarios</h1>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <ul class="nav">
+             <li class="nav-item active">
+              <a class="nav-link" href="{% url 'tcc:home'%}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'usuarios:listar' %}">Usuários</a>
+            </li>
+          </ul>
+      </div>
+
+    </nav>
 </header>
-<div class="container-fluid">
+<div class="container-fluid containerFluidTable">
   <div class="container">
-    <div class="row">
+    <div class="row row-container">
       <div class="col">
+          <div class="row">
 
         <table class="table table-striped  table-dark">
           <thead>
@@ -28,6 +41,7 @@
       {% endblock %}
     </div>
   </div>
+</div>
 </div>
 </div>
 </div>

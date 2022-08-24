@@ -2,9 +2,26 @@ body{
     background-color: #181B1A;
 }
 
-.container-fluid, .container, .row{
+.containerFluidTable, .container, .row-container{
     height: 100vh;
     background-color: #181B1A;
+}
+
+.col{
+display: grid;
+align-items: center
+}
+
+
+header{
+    background-color: aliceblue;
+    height: 4rem;
+    position: fixed;
+    width: 100vw;
+}
+
+.navbar-nav{
+    flex-direction: row !important;
 }
 
 
@@ -19,5 +36,5 @@ body{
 
 .table {
     margin-top: 6rem;
-    background-color: none !important;
+    /*background-color: none !important;*/
 }
