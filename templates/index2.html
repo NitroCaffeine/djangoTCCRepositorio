@@ -1,0 +1,41 @@
+{% extends 'listar/base_body.html' %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}"/>
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid container-index">
+        <div class="row">
+            <div class="col">
+                <h1>Login</h1>
+            </div>
+            <div class="content">
+                
+                <div class="row row-btn">
+                    {% if not request.user.is_authenticated %}
+                    <button type="submit" class="btn btn-warning"><a class="nav-link" href="{% url 'usuarios:login' %}">Entrar</a></button>
+                    {% endif %}
+                    <button type="submit" class="btn btn-warning"><a class="nav-link" href="{% url 'usuarios:logout' %}">Sair</a></button>
+                </div>
+                
+                    {% if request.user.is_authenticated %}
+                        <a href="{% url 'usuarios:mudar_senha' %}">Mudar senha</a>
+                        <p>Está logado {{ request.user.username }}</p>
+                    {% else %}
+                        <p>não está logado</p>
+                    {% endif %}
+
+            </div>
+                
+        </div>
+
+    </div>
+
+{% endblock %}
+   
+
+
+

@@ -10,7 +10,6 @@
     <th>Titulo</th>
     <th>Curso</th>
     <th>Ano</th>
-    {% comment %} <th>Palavras-Chaves</th> {% endcomment %}
     <th>Autor</th>
     <th>Orientador</th>
     <th> Arquivo </th>
@@ -24,17 +23,16 @@
         <tr>
         <td>{{consulta.titulo}}</td>
         <td>{{consulta.curso}}</td>
-        <td>{{consulta.ano_documento}}<td/>
-        {% comment %} <td>{{consulta.palavras_chave}}</td> {% endcomment %}
+        <td>{{consulta.ano_documento}}</td>
         <td>{{consulta.autor.primeiro_nome}}</td> 
         <td>{{consulta.orientador.primeiro_nome}}</td>
         <td><button type="button" onclick="window.open('{{consulta.arquivo.url}}')"  value="Download"><i class="bi bi-download"></i></button>
         </td>
         <td><button type="button" class="btn-edit"><a class="bi bi-eye" href="{% url 'tcc:tcc' consulta.id %}"></a></button></td>
-        <td><button type="button" class=" btn-edit"><a class="bi bi-pencil-square" href="{% url 'tcc:atualizar' 'tcc' consulta.id %}"/></button></td>
+        <td><button type="button" class=" btn-edit"><a class="bi bi-pencil-square" href="{% url 'tcc:atualizar' 'tcc' consulta.id %}"></a></button></td>
 
-        <td><button type="button" class="btn-edit"><a class="bi bi-trash-fill" href="{% url 'tcc:deletar' 'tcc' consulta.id %}"/></button>
-        </td>
+        <td><button type="button" class="btn-edit"><a class="bi bi-trash-fill" href="{% url 'tcc:deletar' 'tcc' consulta.id %}"></a></button>
+        </td>  
         </tr>
 
     {% endfor %} 
