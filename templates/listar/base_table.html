@@ -8,24 +8,27 @@
   <div class="container">
     <div class="row row-container">
       <div class="col">
-          <div class="row">
+          <div class="row row-table">
 
-        <table class="table table-striped  table-dark">
-          <thead>
-            <tr>
-              {% block cabeca %} {% endblock %}
-            </tr>
-          </thead>
+              <table class="table table-dark table-hover ">
+                <thead>
+                  <tr>
+                    {% block cabeca %} {% endblock %}
+                  </tr>
+                </thead>
 
-          <tbody>
-            <tr>
-              {% block corpo %} {% endblock %}
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      {% endblock %}
+                <tbody>
+                  {% block corpo %}
+                    
+                  {% endblock %}
+                </tbody>
+              </table>
+            </div>
+            {% block criar %}
+           
+            {% endblock %}
+{% endblock %}
+    
     </div>
   </div>
 </div>

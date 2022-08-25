@@ -1,0 +1,89 @@
+{% extends 'listar/base_body.html' %} 
+
+{% load static %}
+
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/tcc_individual.css' %}"/>
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid container-tcc">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col-4">
+                        <p>Titulo<p>
+                    </div>
+                    <div class="col">
+                        
+                        <p>{{tcc.titulo}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <p>Curso<p>
+                    </div>
+                    <div class="col">
+                    <p>{{tcc.curso}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <p>Autor<p>
+                    </div>
+                    <div class="col">
+                    <p>{{tcc.autor}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <p>Orientador<p>
+                    </div>
+                    <div class="col">
+                        <p>{{tcc.orientador}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <p>Ano<p>
+                    </div>
+                    <div class="col">
+                        <p>{{tcc.ano_documento}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <p>Palavras-Chaves<p>
+                    </div>
+                    <div class="col">
+                        <p>{{tcc.palavras_chave}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <p>Resumo<p>
+                    </div>
+                    <div class="col">
+                        <p>{{tcc.resumo}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <p>Arquivo<p>
+                    </div>
+                    <div class="col">
+                        <a href='{{tcc.arquivo.url}}'>Arquivo</a>
+                    </div>
+                </div>
+            
+            </div>
+
+        </div>
+
+    <div>
+
+
+
+{% endblock %}
+

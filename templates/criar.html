@@ -1,20 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="card-body">
-        <h2>Criar {{ model }}</h2>
+{% extends 'listar/base_body.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/atualizar.css' %}" />
+{% endblock %} {% block body %}
+    <div class="container-fluid container-atualizar">
+        <div class="row row-1">
+            <div class="col">
         <form method="post" enctype="multipart/form-data">
+
+            <div class="col grid-col">
             {% csrf_token %}
             {{form.as_p}}
+          
+            <div id="btn-atualizar">
             <a type="button" class="btn btn-danger" href="{%url 'tcc:home' %}">Cancelar</a>
             <button type="submit" class="btn btn-success">Criar</button>
+            </div>
+        </div>
         </form>
     </div>
-</body>
-</html>
+</div>
+</div>
+
+{% endblock %}
