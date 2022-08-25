@@ -110,6 +110,10 @@ select[name="modalidade"]{
     
 }
 
+#id_foto{
+    margin-bottom: 6rem;
+}
+
 #id_resumo, #id_curso, #id_autor, #id_orientador, #id_modalidade{
     max-height: 90px;
     border-radius: 4px;
