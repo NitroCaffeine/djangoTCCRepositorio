@@ -15,7 +15,7 @@ def home(request):
 @login_required
 def tcc(request,id):
     tcc_detail = get_object_or_404(TCC, id=id)
-    return render(request, 'tcc.html', context={'tcc': tcc_detail})
+    return render(request, 'tcc_individual.html', context={'tcc': tcc_detail})
 
 @login_required
 def criar(request, model):

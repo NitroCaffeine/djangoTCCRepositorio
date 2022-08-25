@@ -9,6 +9,7 @@ header{
     height: 4rem;
     position: fixed;
     width: 100vw;
+    background-color: #181B1A;
    
 }
 
@@ -20,6 +21,7 @@ hr{
    
     
 }
+
 
 .navbar{
    padding: 1rem;

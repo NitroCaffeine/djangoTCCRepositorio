@@ -1,4 +1,29 @@
-{% for consulta in consultas %}
-    <p>{{consulta.nome}}</p>
-    <p>{{consulta.modalidade}}</p>
-{% endfor %}
+{% extends 'listar/base_table.html' %}
+
+{% block cabeca %}
+    <th>Nome</th>
+    <th>Modalidade</th>
+    <th>Editar</th>
+    <td>Excluir</td>
+
+{% endblock %}
+
+{% block corpo %}
+    {% for consulta in consultas %}
+    <tr>
+        <td>{{consulta.nome}}</td>
+        <td>{{consulta.modalidade}}</td>
+        <td><button type="button" class=" btn-edit"><a class="bi bi-pencil-square" href="{% url 'tcc:atualizar' 'curso' consulta.id %}"/></button></td>
+
+        <td><button type="button" class="btn-edit"><a class="bi bi-trash-fill" href="{% url 'tcc:deletar' 'curso' consulta.id %}"/></button></td>
+        <tr>
+    </tr>
+    {% endfor %}
+
+{% endblock %}
+
+
+
+{% block criar %}
+    <button class="btn btn-success btn-criar"><a class="nav-link bi bi-plus"  href="{% url 'tcc:criar' 'curso' %}">Criar</a></button>
+{% endblock %}

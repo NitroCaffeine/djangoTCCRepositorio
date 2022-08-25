@@ -1,0 +1,127 @@
+body{
+    background-color: #181B1A;
+}
+
+.container-atualizar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #181B1A;
+}
+
+label, li, span{
+    color: #fff;
+    
+}
+
+.row-1{
+    margin-top: 4rem;
+    width: 100vw;
+}
+
+.grid-col{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 4rem;
+    justify-content: center;
+   
+
+
+}
+
+.grid-col p:nth-child(9){
+    grid-area: 4 / 1 / span 1 / span 1 ;
+} 
+
+.grid-col ul {
+    grid-area: 3 / 2 / span 4 / span 1 ;
+
+}
+
+p ~ ul{
+    width: 300px;
+    margin: 0;
+}
+
+
+/* .grid-col p:nth-child(6){
+    grid-area: 5 / 2 / span 1 / span 1 ;
+} */
+
+
+
+
+
+.btn{
+    max-width: 100px;
+}
+
+.helptext{
+    display: none;
+}
+
+#btn-atualizar{
+    display: flex;
+    align-items: center;
+    
+}
+
+#btn-atualizar .btn{
+    margin-left: 1rem;
+}
+
+p {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+
+input {
+    border-radius: 5px;
+    border: 0;
+    margin-bottom: 1rem;
+    width: 280px;
+    height: 30px;
+ }
+
+
+ input:focus{
+    outline: none; 
+    
+
+}
+
+
+/* ATUALIZAR */
+
+p{
+    color: white;
+}
+
+label[for="id_curso"], label[for="id_modalidade"]{
+    height: 24px;
+}
+
+
+select[name="modalidade"]{
+    margin-bottom: 15px !important;
+    height: 30px;
+    
+}
+
+#id_foto{
+    margin-bottom: 6rem;
+}
+
+#id_resumo, #id_curso, #id_autor, #id_orientador, #id_modalidade{
+    max-height: 90px;
+    border-radius: 4px;
+    
+}
+
+#id_resumo:focus, #id_curso:focus, #id_autor:focus, #id_orientador:focus, #id_modalidade{
+    border: 0;
+    outline: none;
+    
+}

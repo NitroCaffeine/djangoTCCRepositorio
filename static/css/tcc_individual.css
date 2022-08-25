@@ -1,0 +1,28 @@
+body{
+    background-color: #181B1A;
+}
+
+
+.container-tcc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #181B1A;
+}
+
+.row .col {
+    padding-left: 3.5rem;
+}
+.col .row{
+    border: 1px dashed gray;
+}
+.row{
+    width: 100%;
+}
+
+
+p{
+    color: white !important;
+    font-weight: bold;
+}

@@ -1,15 +1,18 @@
 {% extends 'listar/base_table.html' %}
 
+
+
 {% block cabeca %}
 
-    <th>id</th>
     <th>Nome</th>
     <th>E-mail</th>
+    <th>Editar</th>
+    <th>Apagar</th>
 {% endblock %}
 
 {% block corpo %}
     {% for user in users%}
-    <td> {{user.id}}</td>
+    <tr>
     <td> {{user.username}}</td>
     {% if user.email %}
         <td> {{user.email}}</td>
@@ -17,10 +20,18 @@
 
         <td>#</td>
     {% endif %}
+    <td><button type="button" class=" btn-edit"><a class="bi bi-pencil-square" href="{% url 'usuarios:atualizar' user.id %}"/></button></td>
+
+    <td><button type="button" class="btn-edit"><a class="bi bi-trash-fill" href="{% url 'usuarios:deletar' user.id %}"/></button></td>
+    <tr>
 
    
     {% endfor%}
                         
+{% endblock %}
+
+{% block criar %}
+    <button class="btn btn-success btn-criar"><a class="nav-link bi bi-plus"  href="{% url 'usuarios:criar' %}">Criar</a></button>
 {% endblock %}
 
 

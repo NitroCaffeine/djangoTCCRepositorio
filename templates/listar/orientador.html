@@ -1,5 +1,30 @@
+{% extends 'listar/base_table.html' %}
+
+
+{% block cabeca %}
+
+    <th>Nome</th>
+    <th>Sobrenome</th>
+    <th>Currículo</th>
+    <th> Editar</th>
+    <th>Apagar</th>
+{% endblock %}
+
+{% block corpo %}
 {% for consulta in consultas %}
-    <p>{{consulta.primeiro_nome}}</p>
-    <p>{{consulta.ultimo_nome}}</p>
-    <p>{{consulta.curriculo_link}}</p>
+    <tr>
+    <td>{{consulta.primeiro_nome}}</td>
+    <td>{{consulta.ultimo_nome}}</td>
+    <td>{{consulta.curriculo_link}}</td>
+    <td><button type="button" class=" btn-edit"><a class="bi bi-pencil-square" href="{% url 'tcc:atualizar' 'orientador' consulta.id %}"/></button></td>
+    <td><button type="button" class="btn-edit"><a class="bi bi-trash-fill" href="{% url 'tcc:atualizar' 'orientador' consulta.id %}"/></button></td>
+    </tr>
 {% endfor %}
+
+{% endblock %}
+
+
+
+{% block criar %}
+    <button class="btn btn-success btn-criar"><a class="nav-link bi bi-plus"  href="{% url 'tcc:criar' 'orientador' %}">Criar</a></button>
+{% endblock %}

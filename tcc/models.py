@@ -15,7 +15,7 @@ class Orientador(models.Model):
 class Autor(models.Model):
     primeiro_nome = models.CharField(max_length=40)
     ultimo_nome = models.CharField(max_length=40)
-    foto = models.ImageField(upload_to='fotos', max_length=200, null=True, blank=True)
+    foto = models.ImageField(upload_to='fotos', max_length=200)
 
     def __str__(self):
         return self.primeiro_nome
