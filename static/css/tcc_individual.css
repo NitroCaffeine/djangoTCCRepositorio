@@ -11,18 +11,64 @@ body{
     background-color: #181B1A;
 }
 
-.row .col {
-    padding-left: 3.5rem;
-}
-.col .row{
-    border: 1px dashed gray;
-}
-.row{
+
+
+
+
+.row-1{
     width: 100%;
+    padding: 1.3rem;
+
 }
+
+.row-1, .row-2 .col{
+    display: flex !important;
+    justify-content: center !important;
+}
+
+
+h2, h3, h4, h5:not([id="resumo"]), h6{
+    color: white;
+    margin-bottom: 0;
+    margin-top: 0;
+   display: flex;
+   align-items: center;
+}
+
+#resumo {
+    display: flex;
+    justify-content: center;
+    background-color: #1c1d1d;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
 
 
 p{
     color: white !important;
-    font-weight: bold;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    /* font-size: small; */
 }
+
+.row-img{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.col-name{
+    display: flex;
+    justify-content: end;
+}
+
+
+
+/* .img-thumbnail{
+    max-width: 40px;
+    max-height: 30px;
+} */

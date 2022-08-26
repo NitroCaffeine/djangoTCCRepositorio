@@ -12,7 +12,7 @@ def autenticar_model(model):
 
 def home(request):
     tccs = TCC.objects.all()
-    return render(request, 'index.html', context={'tccs': tccs})
+    return render(request, 'index.html', context={'consultas': tccs})
 
 @login_required
 def tcc(request,id):

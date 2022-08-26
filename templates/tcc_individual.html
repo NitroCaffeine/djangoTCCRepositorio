@@ -1,89 +1,156 @@
-{% extends 'listar/base_body.html' %} 
-
-{% load static %}
-
-
-{% block css %}
-    <link rel="stylesheet" href="{% static 'css/tcc_individual.css' %}"/>
-{% endblock %}
-
-{% block body %}
-    <div class="container-fluid container-tcc">
+{% extends 'listar/base_body.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/tcc_individual.css' %}" />
+{% endblock %} {% block body %}
+<div class="container-fluid container-tcc">
+  <div class="row row-1">
+    <div class="col-5">
+        <div class="row row-img">
+            <div class="col-5" id="col-img">
+                 <img src='{{tcc.autor.foto.url}}' class="img-thumbnail"/>
+            </div>
+        </div>
         <div class="row">
             <div class="col">
                 <div class="row">
-                    <div class="col-4">
-                        <p>Titulo<p>
+
+                    <div class="col-5 col-name">
+                        <h5>Título</h5>
                     </div>
                     <div class="col">
-                        
                         <p>{{tcc.titulo}}</p>
                     </div>
+
                 </div>
-                <div class="row">
-                    <div class="col-4">
-                        <p>Curso<p>
-                    </div>
-                    <div class="col">
-                    <p>{{tcc.curso}}</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <p>Autor<p>
-                    </div>
-                    <div class="col">
-                    <p>{{tcc.autor}}</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <p>Orientador<p>
-                    </div>
-                    <div class="col">
-                        <p>{{tcc.orientador}}</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <p>Ano<p>
-                    </div>
-                    <div class="col">
-                        <p>{{tcc.ano_documento}}</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <p>Palavras-Chaves<p>
-                    </div>
-                    <div class="col">
-                        <p>{{tcc.palavras_chave}}</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <p>Resumo<p>
-                    </div>
-                    <div class="col">
-                        <p>{{tcc.resumo}}</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <p>Arquivo<p>
-                    </div>
-                    <div class="col">
-                        <a href='{{tcc.arquivo.url}}'>Arquivo</a>
-                    </div>
-                </div>
-            
+              
+            </div>
+            {% comment %} <div class="row"> {% endcomment %}
+               
+            {% comment %} </div> {% endcomment %}
+        </div>
+        <div class="row">
+            <div class="col-5 col-name">
+                <h5>Curso</h5>
+            </div>
+
+            <div class="col">
+               
+               <p>{{tcc.curso}}</p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-5 col-name">
+                <h5>Orientador</h5>
+            </div>
+
+            <div class="col">
+               
+                <p>{{tcc.orientador}}</p>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-5 col-name">
+                    <h5>Ano</h5>
+            </div>
+            <div class="col">
+        
+                <p>{{tcc.ano_documento}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5 col-name">
+                <h5>Palavras-chaves</h5>
+            </div>
+
+            <div class="col">
+               
+                <p>{{tcc.palavras_chave}}</p>
             </div>
 
         </div>
 
-    <div>
+    </div>
+    <div class="col-7">
+        <div class="row">
+            <div class="col-12">
+                {% comment %} <p>{{tcc.resumo}}</p> {% endcomment %}
+                <h5>Resumo:</h5>
+                <br>
+                <p id="resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra eros odio, sed commodo urna bibendum id. Cras vel faucibus ante. Cras sed sagittis lacus. Donec a volutpat ex. In rutrum molestie augue in convallis. Sed non scelerisque mauris. In at sem rhoncus, accumsan est ut, accumsan neque. Vivamus suscipit sem ac ligula dignissim, eget pharetra felis blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+                    Aenean faucibus imperdiet tincidunt. Praesent consequat fringilla ipsum id maximus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam tempus nibh vel imperdiet aliquet. Phasellus tincidunt vitae sapien ac lacinia. Morbi commodo tellus enim, et elementum dolor congue eget. Fusce eu augue quis ante vulputate tempor tincidunt sed ante. Pellentesque odio felis, condimentum a ante in, iaculis finibus odio.</p>
+                    <br>
+                    <button type="button" class="btn btn-success" onclick="window.open('{{tcc.arquivo.url}}')"  value="Download"><i class="bi bi-download"></i></button>
+            </div>
+            
+        </div>
+
+    </div>
+    
+   
+    </div>
+  </div>
+
+  <div>{% endblock %}</div>
+</div>
 
 
+{% comment %} 
+<div class="row row-2">
+    <div class="col">
+      <div class="col-5 col-name">
+        <h5>Título:</h5>
+      </div>
+      <div class="col-7">
+        <p>{{tcc.titulo}}</p>
+      </div>
+      
+    </div>
 
-{% endblock %}
-
+    <div class="col">
+      <div class="col-5">
+        <h5>Autor:</h5>
+      </div>
+      <div class="col-7">
+        <p>{{tcc.autor}}</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="col-5">
+        <h5>Curso:</h5>
+      </div>
+      <div class="col-9">
+        <p>{{tcc.curso}}</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="col-5">
+        <h5>Orientador:</h5>
+      </div>
+      <div class="col-7">
+        <p>{{tcc.orientador}}</p>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col">
+        <div class="col-2">
+          <h5>Palavras-Chaves:</h5>
+        </div>
+        <div class="col-5">
+          <p>{{tcc.palavras_chave}}</p>
+        </div>
+      </div>
+  <hr />
+  <div class="row row-2">
+    <div class="col">
+      <div class="col-2">
+        <h5 id="resumo">Resumo:</h5>
+      </div>
+      <div class="col-11">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra eros odio, sed commodo urna bibendum id. Cras vel faucibus ante. Cras sed sagittis lacus. Donec a volutpat ex. In rutrum molestie augue in convallis. Sed non scelerisque mauris. In at sem rhoncus, accumsan est ut, accumsan neque. Vivamus suscipit sem ac ligula dignissim, eget pharetra felis blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+      </div>
+    </div> {% endcomment %}
