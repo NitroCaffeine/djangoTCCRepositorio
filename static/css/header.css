@@ -1,7 +1,7 @@
 
 .container, .row-container{
     height: 100vh;
-    background-color: #181B1A;
+    background-color: #212529;
 }
 
 header{
@@ -9,15 +9,16 @@ header{
     height: 4rem;
     position: fixed;
     width: 100vw;
-    background-color: #181B1A;
+    background-color: #212529;
    
 }
 
 hr:not([id="resumo-hr"]){
-    background-color: white;
+    /* background-color: white; */
     height: 2px;
     width: 95%;
     margin: 0 auto 0 auto;
+    background-color: #FFC006;
    
     
 }

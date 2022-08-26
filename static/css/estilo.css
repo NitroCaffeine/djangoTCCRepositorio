@@ -1,5 +1,5 @@
 body {
-    background-color: #181B1A;
+    background-color: #212529;
 }
 
 .container-index {
@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #181B1A;
+    background-color: #212529;
 
 }
 
@@ -15,7 +15,8 @@ body {
 .row {
     height: 40%;
     padding: 2rem;
-    background-color: #1D2021;
+    /* background-color: #1D2021; */
+    background-color: #212529;
     border-radius: 5px;
 }
 

@@ -1,5 +1,5 @@
 body{
-    background-color: #181B1A;
+    background-color: #212529;
 }
 
 .container-login{
@@ -7,7 +7,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #181B1A;
+    background-color: #212529;
  }
 
  .col{
@@ -20,7 +20,7 @@ body{
 
      max-height: 450px;
      padding: 2rem;
-     background-color: #1D2021;
+     background-color: #323539;
      border-radius: 5px;
  }
 

@@ -1,5 +1,6 @@
 body{
-    background-color: #181B1A;
+    /* background-color: #181B1A; */
+    background-color: #212529;
 }
 
 .container-atualizar{
@@ -7,7 +8,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #181B1A;
+    background-color: #212529;
 }
 
 label, li, span{
@@ -67,7 +68,7 @@ p ~ ul{
     
 }
 
-#btn-atualizar .btn{
+#btn-atualizar .btn:nth-child(2){
     margin-left: 1rem;
 }
 
@@ -112,9 +113,9 @@ select[name="modalidade"]{
     
 }
 
-input[id='id_foto']{
-    margin-bottom: 0 ;
-} 
+/* #id_foto{
+    margin-bottom: 6rem ;
+}  */
 
 #id_resumo, #id_curso, #id_autor, #id_orientador, #id_modalidade{
     max-height: 90px;

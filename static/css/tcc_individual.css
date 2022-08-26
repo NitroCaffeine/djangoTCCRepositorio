@@ -1,5 +1,5 @@
 body{
-    background-color: #181B1A;
+    background-color: #212529;
 }
 
 
@@ -8,7 +8,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #181B1A;
+    background-color: #212529;
 }
 
 
@@ -37,10 +37,11 @@ h2, h3, h4, h5:not([id="resumo"]), h6{
 
 #resumo {
     display: flex;
-    justify-content: center;
-    background-color: #1c1d1d;
+    /* justify-content: center; */
+    background-color:  #323539;
     border-radius: 5px;
-    padding: 1rem;
+    padding: 1rem;;
+    min-height: 160px;
 }
 
 
@@ -50,9 +51,6 @@ p{
     font-weight: 300;
     margin-top: 0;
     margin-bottom: 0;
-    display: flex;
-    align-items: center;
-    /* font-size: small; */
 }
 
 .row-img{
@@ -66,13 +64,4 @@ p{
     justify-content: end;
 }
 
-.col-resume{
-    min-height: 270px;
-}
 
-
-
-/* .img-thumbnail{
-    max-width: 40px;
-    max-height: 30px;
-} */
