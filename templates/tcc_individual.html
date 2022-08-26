@@ -3,7 +3,7 @@
 {% endblock %} {% block body %}
 <div class="container-fluid container-tcc">
   <div class="row row-1">
-    <div class="col-5">
+    <div class="col-5 col-detail">
         <div class="row row-img">
             <div class="col-5" id="col-img">
                  <img src='{{tcc.autor.foto.url}}' class="img-thumbnail"/>
@@ -72,15 +72,13 @@
         </div>
 
     </div>
-    <div class="col-7">
+    <div class="col-7 col-resume">
         <div class="row">
             <div class="col-12">
                 {% comment %} <p>{{tcc.resumo}}</p> {% endcomment %}
                 <h5>Resumo:</h5>
                 <br>
-                <p id="resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra eros odio, sed commodo urna bibendum id. Cras vel faucibus ante. Cras sed sagittis lacus. Donec a volutpat ex. In rutrum molestie augue in convallis. Sed non scelerisque mauris. In at sem rhoncus, accumsan est ut, accumsan neque. Vivamus suscipit sem ac ligula dignissim, eget pharetra felis blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-
-                    Aenean faucibus imperdiet tincidunt. Praesent consequat fringilla ipsum id maximus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam tempus nibh vel imperdiet aliquet. Phasellus tincidunt vitae sapien ac lacinia. Morbi commodo tellus enim, et elementum dolor congue eget. Fusce eu augue quis ante vulputate tempor tincidunt sed ante. Pellentesque odio felis, condimentum a ante in, iaculis finibus odio.</p>
+                <p id="resumo">{{tcc.resumo}}</p>
                     <br>
                     <button type="button" class="btn btn-success" onclick="window.open('{{tcc.arquivo.url}}')"  value="Download"><i class="bi bi-download"></i></button>
             </div>

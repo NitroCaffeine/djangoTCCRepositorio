@@ -77,6 +77,8 @@ p {
 }
 
 
+
+
 input {
     border-radius: 5px;
     border: 0;
@@ -110,9 +112,9 @@ select[name="modalidade"]{
     
 }
 
-#id_foto{
-    margin-bottom: 6rem;
-}
+input[id='id_foto']{
+    margin-bottom: 0 ;
+} 
 
 #id_resumo, #id_curso, #id_autor, #id_orientador, #id_modalidade{
     max-height: 90px;

@@ -66,6 +66,10 @@ p{
     justify-content: end;
 }
 
+.col-resume{
+    min-height: 270px;
+}
+
 
 
 /* .img-thumbnail{
