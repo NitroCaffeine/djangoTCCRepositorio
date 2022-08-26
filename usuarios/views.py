@@ -63,3 +63,9 @@ def deletar(request, id):
     except:
         pass
     return redirect('tcc:home')
+
+def logout(request):
+    return render(request, 'userlogin.html')
+
+def logoutTrue(request):
+    return redirect(request, 'tcc:home')
