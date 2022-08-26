@@ -1,16 +1,18 @@
-from django.http import HttpResponse, Http404
-from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
+from django.http import Http404, HttpResponse
+from django.shortcuts import get_object_or_404, redirect, render
 
 from . import forms
 from .models import TCC, Autor, Curso, Orientador
+
 
 def autenticar_model(model):
     if model.lower() not in ['tcc', 'autor', 'orientador', 'curso']:
         raise Http404('Model not exist')
 
 def home(request):
-    return render(request, 'index.html')
+    tccs = TCC.objects.all()
+    return render(request, 'index.html', context={'tccs': tccs})
 
 @login_required
 def tcc(request,id):
