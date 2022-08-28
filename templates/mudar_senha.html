@@ -1,19 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mudar senha</title>
-</head>
-<body>
-    <form method="post">
-        {% csrf_token %}
-        {{ form }}
-        <button type="submit">Save changes</button>
-    </form>
-</body>
-</html>
+{% extends 'base_body.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/atualizar.css' %}" />
+{% endblock %} {% block body %}
 
+<div class="container-fluid container-atualizar">
+  <div class="row row-1">
+    <div class="col">
+     
+        <form method="post">
+            <div class="col grid-col">
+          {% csrf_token %} {{form.as_p}}
+
+          <div id="btn-atualizar">
+          <a type="button" class="btn btn-danger" href="{%url 'tcc:home' %}"
+            >Cancel</a
+          >
+          <button type="submit" class="btn btn-success">Update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
 
 
