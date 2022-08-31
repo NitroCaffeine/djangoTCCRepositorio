@@ -17,5 +17,5 @@ urlpatterns = [
     path('sair/', auth_views.LogoutView.as_view(), name="logout"),
     path('mudar_senha/', views.change_password, name='mudar_senha'),
     path('logout/', views.logout, name='logout'),
-     path('sair/', views.logoutTrue, name='logoutTrue'),
+    path('sair/', views.logoutTrue, name='logoutTrue'),
 ]

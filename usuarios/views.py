@@ -4,23 +4,19 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth.models import User
 from django.shortcuts import redirect, render
-from django.views.generic.edit import CreateView
 
 from .forms import UserForm
 
 
-@login_required
 # Create your views here.
+@login_required
 def change_password(request):
     if request.method == 'POST':
         form = PasswordChangeForm(request.user, request.POST)
         if form.is_valid():
             user = form.save()
             update_session_auth_hash(request, user)  
-            messages.success(request, 'Your password was successfully updated!')
             return redirect('tcc:home')
-        else:
-            messages.error(request, 'Please correct the error below.')
     else:
         form = PasswordChangeForm(request.user)
     return render(request, 'mudar_senha.html', {
@@ -59,7 +55,6 @@ def atualizar(request, id):
             except Exception as e: 
                 pass    
     return render(request,'atualizar.html',{'form':form})
-
 @login_required
 def deletar(request, id):
     user = User.objects.get(id=id)
@@ -69,8 +64,10 @@ def deletar(request, id):
         pass
     return redirect('tcc:home')
 
+@login_required
 def logout(request):
     return render(request, 'userlogin.html')
 
+@login_required
 def logoutTrue(request):
     return redirect(request, 'tcc:home')

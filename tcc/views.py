@@ -54,6 +54,7 @@ def atualizar(request, model, id):
         class_model = eval(f'{model.capitalize()}')
     class_form = eval(f'forms.{model.capitalize()}Form')
 
+    #isso é para conseguir pegar os campos do model
     consultas = class_model.objects.get(id=id)
     a = consultas.__doc__.split('(')
     a = ''.join(a[1])
