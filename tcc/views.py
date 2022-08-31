@@ -27,8 +27,9 @@ def criar(request, model):
         form = form_model(request.POST, request.FILES)  
         if form.is_valid():    
             form.save() 
+            model_aux = model
             model = form.instance
-            return redirect('tcc:home')  
+            return redirect(reverse('tcc:listar', kwargs={'model': model_aux}))
 
     else:  
         form = form_model()  
@@ -91,4 +92,4 @@ def deletar(request, model, id):
         book.delete()
     except:
         pass
-    return redirect('tcc:home')
+    return redirect(reverse('tcc:listar', kwargs={'model': model}))

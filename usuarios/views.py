@@ -26,7 +26,7 @@ def change_password(request):
 @login_required
 def listar(request):
     users = User.objects.all()
-    return render(request, 'listar_users.html', context={'users': users})
+    return render(request, 'listar/listar_users.html', context={'users': users})
 
 @login_required
 def criar(request):

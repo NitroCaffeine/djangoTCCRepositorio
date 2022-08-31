@@ -1,6 +1,10 @@
 {% extends 'base_body.html' %} {% load static %} {% block css %}
 <link rel="stylesheet" href="{% static 'css/tcc_individual.css' %}" />
 {% endblock %} {% block body %}
+{% block title %}
+<title>{{tcc.titulo}}</title>
+{% endblock  %}
+
 <div class="container-fluid container-tcc">
   <div class="row row-1">
     <div class="col-5 col-detail">
@@ -23,9 +27,6 @@
                 </div>
               
             </div>
-            {% comment %} <div class="row"> {% endcomment %}
-               
-            {% comment %} </div> {% endcomment %}
         </div>
         <div class="row">
             <div class="col-5 col-name">

@@ -14,9 +14,11 @@
     {% block css %}
 
     {% endblock %}
-  
-    <title>Home</title>
-<body>
+
+    {% block title %}
+      <title>Home</title>
+    {% endblock  %}
+    <body>
     
 <div class="container-fluid"> 
 {% comment %} <header> {% endcomment %}
