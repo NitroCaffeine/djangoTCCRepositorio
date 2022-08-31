@@ -2,7 +2,7 @@
 ### Instalação
 Clone o repositorio
 ```
-git clone https://github.com/lennercp/desen-web-django.git
+git clone https://github.com/NitroCaffeine/sla.git
 cd desen-web-django
 ```
 Ative o ambiente virtual

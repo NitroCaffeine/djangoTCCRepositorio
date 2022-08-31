@@ -12,11 +12,13 @@
 
 {% block corpo %}
     {% for consulta in consultas %}
-    <td>{{consulta.primeiro_nome}}</td>
-    <td>{{consulta.ultimo_nome}}</td>
-    <td><a href='{{consulta.foto.url}}'>Link</a></td>
-    <td><button type="button" class=" btn-edit"><a class="bi bi-pencil-square" href="{% url 'tcc:atualizar' 'autor' consulta.id %}"/></button></td>
-    <td><button type="button" class="btn-edit"><a class="bi bi-trash-fill" href="{% url 'tcc:deletar' 'autor' consulta.id %}"/></button></td>
+    <tr>
+        <td>{{consulta.primeiro_nome}}</td>
+        <td>{{consulta.ultimo_nome}}</td>
+        <td><a href='{{consulta.foto.url}}'>Link</a></td>
+        <td><button type="button" class=" btn-edit"><a class="bi bi-pencil-square" href="{% url 'tcc:atualizar' 'autor' consulta.id %}"/></button></td>
+        <td><button type="button" class="btn-edit"><a class="bi bi-trash-fill" href="{% url 'tcc:deletar' 'autor' consulta.id %}"/></button></td>
+    </tr>
     {% endfor %}
 
 {% endblock %}

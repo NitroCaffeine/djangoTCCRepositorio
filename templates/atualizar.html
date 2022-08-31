@@ -6,7 +6,7 @@
   <div class="row row-1">
     <div class="col">
      
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             <div class="col grid-col">
           {% csrf_token %} {{form.as_p}}
 

@@ -17,7 +17,7 @@
     <td>{{consulta.ultimo_nome}}</td>
     <td>{{consulta.curriculo_link}}</td>
     <td><button type="button" class=" btn-edit"><a class="bi bi-pencil-square" href="{% url 'tcc:atualizar' 'orientador' consulta.id %}"/></button></td>
-    <td><button type="button" class="btn-edit"><a class="bi bi-trash-fill" href="{% url 'tcc:atualizar' 'orientador' consulta.id %}"/></button></td>
+    <td><button type="button" class="btn-edit"><a class="bi bi-trash-fill" href="{% url 'tcc:deletar' 'orientador' consulta.id %}"/></button></td>
     </tr>
 {% endfor %}
 

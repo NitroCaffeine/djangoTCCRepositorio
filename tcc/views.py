@@ -1,6 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
+from django.urls import reverse
 
 from . import forms
 from .models import TCC, Autor, Curso, Orientador
@@ -14,7 +15,6 @@ def home(request):
     tccs = TCC.objects.all()
     return render(request, 'index.html', context={'consultas': tccs})
 
-@login_required
 def tcc(request,id):
     tcc_detail = get_object_or_404(TCC, id=id)
     return render(request, 'tcc_individual.html', context={'tcc': tcc_detail})
@@ -66,12 +66,13 @@ def atualizar(request, model, id):
 
     form = class_form(initial=dic)
     if request.method == "POST":  
-        form = class_form(request.POST, instance=consultas)  
+        form = class_form(request.POST, request.FILES, instance=consultas)  
         if form.is_valid():  
             try:  
                 form.save() 
+                model_aux = model
                 model = form.instance
-                return redirect('tcc:home')  
+                return redirect(reverse('tcc:listar', kwargs={'model': model_aux}))  
             except Exception as e: 
                 pass    
     return render(request,'atualizar.html',{'form':form})
